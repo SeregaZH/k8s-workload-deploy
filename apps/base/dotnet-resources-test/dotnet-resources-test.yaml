@@ -14,11 +14,11 @@ spec:
       labels:
         app: dotnet-resources-test
     spec:
+      imagePullSecrets:
+        - name: acr2-secret
       containers:
       - name: dotnet-resources-test
         image: sztestacr.azurecr.io/dotnet-resources-test:latest
-        imagePullSecrets:
-        - name: dpr-secret
         ports:
         - containerPort: 80
         env:
