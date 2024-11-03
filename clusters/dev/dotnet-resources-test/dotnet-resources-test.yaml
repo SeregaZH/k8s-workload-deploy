@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-resources-test
+  labels:
+    app: dotnet-resources-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnet-resources-test
+  template:
+    metadata:
+      labels:
+        app: dotnet-resources-test
+    spec:
+      containers:
+      - name: dotnet-resources-test
+        image: sztestacr.azurecr.io/dotnet-resources-test:latest
+        imagePullSecrets:
+        - name: dpr-secret
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Development"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
