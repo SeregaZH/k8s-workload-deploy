@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: https://github.com/SeregaZH/k8s-workload-deploy.git
+  url: ssh://git@github.com/SeregaZH/k8s-workload-deploy
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
