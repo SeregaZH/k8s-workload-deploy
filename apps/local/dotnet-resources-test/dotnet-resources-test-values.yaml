@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-resources-test
+  labels:
+    app: dotnet-resources-test
+spec:
+  selector:
+    matchLabels:
+      app: dotnet-resources-test
+  template:
+    metadata:
+      labels:
+        app: dotnet-resources-test
+    spec:
+      imagePullSecrets:
+        - name: acr2-secret
+      containers:
+      - name: dotnet-resources-test
+        image: sztestacr.azurecr.io/dotnet-resources-test:0.0.3
