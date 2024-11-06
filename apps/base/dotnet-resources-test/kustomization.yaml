@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: main-workloads
 resources:
   - dotnet-resources-test.yaml
+  - dotnet-resources-hpa.yaml
