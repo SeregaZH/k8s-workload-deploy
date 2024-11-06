@@ -15,11 +15,11 @@ spec:
     spec:
       containers:
       - name: dotnet-resources-test
-        image: sztestacr.azurecr.io/dotnet-resources-test:0.0.6
+        image: sztestacr.azurecr.io/dotnet-resources-test:0.0.7
         resources:
           requests:
             memory: "3025Mi"
-            cpu: "50m"
+            cpu: "200m"
           limits:
             memory: "3025Mi"
-            cpu: "50m"
+            cpu: "200m"
