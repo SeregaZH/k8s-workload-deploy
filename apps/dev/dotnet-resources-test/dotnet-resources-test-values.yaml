@@ -18,8 +18,8 @@ spec:
         image: sztestacr.azurecr.io/dotnet-resources-test:0.0.6
         resources:
           requests:
-            memory: "3024Mi"
+            memory: "3025Mi"
             cpu: "50m"
           limits:
-            memory: "3024Mi"
+            memory: "3025Mi"
             cpu: "50m"
