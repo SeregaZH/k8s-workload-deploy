@@ -17,4 +17,4 @@ spec:
         - name: acr2-secret
       containers:
       - name: dotnet-resources-test
-        image: sztestacr.azurecr.io/dotnet-resources-test:0.0.3
+        image: ghcr.io/seregazh/dotnet-resources-test:0.0.17
