@@ -7,13 +7,13 @@ spec:
   hosts:
   - "*"
   gateways:
-  - istio-system/istio-ingress-gateway
+  - istio-system/istio-ingressgateway
   http:
   - match:
     - uri:
         prefix: /api
     route:
     - destination:
-        host: dotnet-hello-world-api-svc.main-workloads.svc.cluster.local
+        host: dotnet-hello-world-api
         port:
           number: 80
