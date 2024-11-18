@@ -18,7 +18,7 @@ spec:
       - name: dotnet-hello-world-api
         image: sztestacr.azurecr.io/dotnet-hello-world-api:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         env:
         - name: ASPNETCORE_ENVIRONMENT
           value: "Development"
