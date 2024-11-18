@@ -17,3 +17,4 @@ spec:
   values:
     global:
       istioNamespace: istio-system
+      istioInjection: enabled

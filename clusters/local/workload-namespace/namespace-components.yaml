@@ -4,3 +4,4 @@ metadata:
   name: main-workloads
   labels:
     name: main-workloads
+    istio-injection: enabled
