@@ -4,3 +4,5 @@ namespace: main-workloads
 resources:
   - dotnet-hello-world-api.yaml
   - dotnet-hello-world-api-hpa.yaml
+  - dotnet-hello-world-api-svc.yaml
+  - dotnet-hello-world-api-vs.yaml
