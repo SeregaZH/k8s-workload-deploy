@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dotnet-hello-world-api-srv
+  name: dotnet-hello-world-api-svc
   labels:
     app: dotnet-hello-world-api
 spec:
