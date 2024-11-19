@@ -23,9 +23,7 @@ spec:
     gateways:
       istio-ingressgateway:
         enabled: true
-        serviceAnnotations:
-          service.beta.kubernetes.io/aws-load-balancer-type: nlb
-        type: LoadBalancer
+        type: NodePort
         ports:
           - port: 80
             targetPort: 80
@@ -33,6 +31,7 @@ spec:
           - port: 443
             targetPort: 443
             name: https
+        hosts:
     global:
       istioNamespace: istio-system
       proxy:
