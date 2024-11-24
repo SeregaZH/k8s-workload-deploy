@@ -14,6 +14,6 @@ spec:
         prefix: /api
     route:
     - destination:
-        host: dotnet-hello-world-api.main-workloads.svc.cluster.local
+        host: 10.97.100.142
         port:
           number: 8080
