@@ -15,5 +15,3 @@ spec:
     route:
     - destination:
         host: dotnet-hello-world-api.main-workloads.svc.cluster.local
-        port:
-          number: 80
