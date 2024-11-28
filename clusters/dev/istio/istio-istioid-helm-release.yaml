@@ -7,7 +7,7 @@ spec:
   interval: 5m
   dependsOn:
     - name: istio-base
-      namespace: istio-system
+      namespace: flux-system
   chart:
     spec:
       chart: istiod
@@ -15,5 +15,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: istio-helm-repo
-        namespace: istio-system
+        namespace: flux-system
       interval: 1m
