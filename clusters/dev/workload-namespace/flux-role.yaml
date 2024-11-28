@@ -5,7 +5,7 @@ metadata:
   namespace: istio-system
 rules:
   - apiGroups: [""]
-    resources: ["secrets"]
+    resources: ["serviceaccounts","secrets"]
     verbs: ["get", "list", "watch"]
 
 ---
