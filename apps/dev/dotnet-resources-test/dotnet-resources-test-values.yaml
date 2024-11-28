@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: dotnet-resources-test
-        image: sztestacr.azurecr.io/dotnet-resources-test:0.0.9
+        image: sztestacr.azurecr.io/dotnet-resources-test:0.0.20
         resources:
           requests:
             memory: "2025Mi"
