@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kiali
+  namespace: istio-system
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: kiali-server
+      version: 1.67.0
+      sourceRef:
+        kind: HelmRepository
+        name: kiali-repo
+        namespace: flux-system
+  values:
+    auth:
+      strategy: token  # Use appropriate auth strategy
+    deployment:
+      ingress_enabled: true
+      ingress_class_name: istio
+    service:
+      type: LoadBalancer
