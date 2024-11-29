@@ -20,6 +20,7 @@ spec:
         name: istio-helm-repo
         namespace: flux-system
   values:
+    name: istio-ingressgateway
     service:
       type: LoadBalancer
       ports:
