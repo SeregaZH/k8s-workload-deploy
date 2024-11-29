@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: dotnet-hello-world-api
-        image: sztestacr.azurecr.io/dotnet-resources-test:0.0.20
+        image: sztestacr.azurecr.io/dotnet-resources-test:0.0.21

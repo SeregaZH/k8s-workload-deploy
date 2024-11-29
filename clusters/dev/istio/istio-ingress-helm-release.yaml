@@ -2,15 +2,15 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: istio-ingress
-  namespace: flux-system
+  namespace: istio-system
 spec:
   releaseName: istio-ingress
   interval: 10m
   dependsOn:
     - name: istio-base
-      namespace: flux-system
+      namespace: istio-system
     - name: istiod
-      namespace: flux-system
+      namespace: istio-system
   chart:
     spec:
       chart: gateway
