@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: kiali-server
-      version: 1.67.0
+      version: 2.1.0
       sourceRef:
         kind: HelmRepository
         name: kiali-repo
@@ -25,3 +25,5 @@ spec:
     kubernetes_config:
       cluster_info:
         enabled: true
+    servers:
+      log_level: debug
