@@ -27,3 +27,12 @@ spec:
         enabled: true
     servers:
       log_level: debug
+    external_services:
+      prometheus:
+        url: "https://defaultazuremonitorworkspace-eus-hya7bueudtf4erfb.eastus.prometheus.monitor.azure.com"
+        auth:
+          type: "bearer"
+          bearer_token:
+            secretKeyRef:
+              name: prometheus-token
+              key: bearer-token
