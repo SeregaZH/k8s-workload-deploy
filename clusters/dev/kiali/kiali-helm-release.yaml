@@ -17,7 +17,11 @@ spec:
     auth:
       strategy: token  # Use appropriate auth strategy
     deployment:
+      view_only_mode: false
       ingress_enabled: true
       ingress_class_name: istio
     service:
       type: LoadBalancer
+    kubernetes_config:
+      cluster_info:
+        enabled: true
