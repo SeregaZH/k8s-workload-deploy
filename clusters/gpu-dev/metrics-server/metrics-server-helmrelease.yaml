@@ -8,10 +8,10 @@ spec:
   chart:
     spec:
       chart: metrics-server
-      version: "3.10.0"
+      version: "0.7.0"
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: sigs
         namespace: flux-system
   interval: 5m0s
   values:
