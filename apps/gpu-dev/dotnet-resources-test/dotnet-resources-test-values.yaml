@@ -13,6 +13,8 @@ spec:
       labels:
         app: dotnet-resources-test
     spec:
+      nodeSelector:
+        envoy: "true"
       containers:
       - name: dotnet-resources-test
         image: ghcr.io/seregazh/dotnet-hello-world-api:0.0.21

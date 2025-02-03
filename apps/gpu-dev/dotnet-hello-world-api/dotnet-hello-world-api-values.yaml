@@ -13,6 +13,8 @@ spec:
       labels:
         app: dotnet-hello-world-api
     spec:
+      nodeSelector:
+        envoy: "true"
       containers:
       - name: dotnet-hello-world-api
         image: ghcr.io/seregazh/dotnet-hello-world-api:0.0.21
