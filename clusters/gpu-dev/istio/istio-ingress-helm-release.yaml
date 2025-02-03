@@ -21,6 +21,8 @@ spec:
         namespace: flux-system
   values:
     name: istio-ingressgateway
+    nodeSelector:
+      ingress: "true"
     service:
       type: NodePort
       ports:
