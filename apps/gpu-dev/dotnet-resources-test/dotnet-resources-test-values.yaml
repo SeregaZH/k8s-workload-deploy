@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: dotnet-resources-test
-        image: ghcr.io/seregazh/dotnet-hello-world-api:0.0.21
+        image: ghcr.io/seregazh/dotnet-hello-world-api:0.0.25
         resources:
           requests:
             memory: "60Mi"
