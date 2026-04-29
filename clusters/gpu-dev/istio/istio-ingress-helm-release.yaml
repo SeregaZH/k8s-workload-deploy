@@ -6,6 +6,10 @@ metadata:
 spec:
   releaseName: istio-ingress
   interval: 10m
+  install:
+    disableOpenAPIValidation: true
+  upgrade:
+    disableOpenAPIValidation: true
   dependsOn:
     - name: istio-base
       namespace: istio-system
