@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- flux-system/gotk-components.yaml
+- flux-system/gotk-sync.yaml
+- apps.yaml
+- istio/namespace-components.yaml
+- istio/istio-helm-repo.yaml
+- istio/istio-base-helm-release.yaml
+- istio/istio-istioid-helm-release.yaml
+- istio/istio-ingress-helm-release.yaml
+- metrics-server/metrics-server-repository.yaml
+- metrics-server/metrics-server-helmrelease.yaml
+- workload-namespace/namespace-components.yaml
+- network/utils/dnsutils.yaml
+- network-gateways-kustomization.yaml
