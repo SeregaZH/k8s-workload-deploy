@@ -1,9 +1,10 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: istiod
   namespace: istio-system
 spec:
+  releaseName: istiod
   interval: 5m
   dependsOn:
     - name: istio-base
