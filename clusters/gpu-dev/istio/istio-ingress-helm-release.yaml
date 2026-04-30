@@ -8,8 +8,10 @@ spec:
   interval: 10m
   install:
     disableOpenAPIValidation: true
+    disableSchemaValidation: true
   upgrade:
     disableOpenAPIValidation: true
+    disableSchemaValidation: true
   dependsOn:
     - name: istio-base
       namespace: istio-system
