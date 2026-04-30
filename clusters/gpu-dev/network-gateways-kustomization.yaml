@@ -9,7 +9,7 @@ spec:
   path: ./clusters/gpu-dev/network/gateways
   prune: true
   wait: false
-  timeout: 3m0s
+  timeout: 10m0s
   dependsOn:
     - name: flux-system
   healthChecks:
