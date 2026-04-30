@@ -6,10 +6,6 @@ metadata:
 spec:
   releaseName: istio-ingress
   interval: 10m
-  install:
-    disableOpenAPIValidation: true
-  upgrade:
-    disableOpenAPIValidation: true
   dependsOn:
     - name: istio-base
       namespace: istio-system
@@ -23,20 +19,3 @@ spec:
         kind: HelmRepository
         name: istio-helm-repo
         namespace: flux-system
-  values: {}
-  postRenderers:
-    - kustomize:
-        patches:
-          - target:
-              kind: Service
-              name: istio-ingress
-            patch: |
-              - op: replace
-                path: /spec/type
-                value: NodePort
-              - op: add
-                path: /spec/ports/1/nodePort
-                value: 30080
-              - op: add
-                path: /spec/ports/2/nodePort
-                value: 30443
