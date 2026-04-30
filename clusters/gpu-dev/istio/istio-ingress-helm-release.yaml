@@ -18,38 +18,25 @@ spec:
   chart:
     spec:
       chart: gateway
-      version: 1.24.0
+      version: "1.24.0"
       sourceRef:
         kind: HelmRepository
         name: istio-helm-repo
         namespace: flux-system
-  values:
-    labels:
-      app: istio-ingressgateway
-      istio: ingressgateway
-    nodeSelector:
-      ingress: "true"
-    service:
-      type: NodePort
-      ports:
-      - name: status-port
-        port: 15021
-        protocol: TCP
-        targetPort: 15021
-      - name: http2
-        port: 80
-        protocol: TCP
-        targetPort: 80
-        nodePort: 30080
-      - name: https
-        port: 443
-        protocol: TCP
-        targetPort: 443
-        nodePort: 30443
-    resources:
-      requests:
-        cpu: 100m
-        memory: 128Mi
-      limits:
-        cpu: 200m
-        memory: 526Mi
+  values: {}
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              kind: Service
+              name: istio-ingress
+            patch: |
+              - op: replace
+                path: /spec/type
+                value: NodePort
+              - op: add
+                path: /spec/ports/1/nodePort
+                value: 30080
+              - op: add
+                path: /spec/ports/2/nodePort
+                value: 30443
